@@ -1,25 +1,7 @@
 <%= form_for(@group) do |f| %>
-  <% if @group.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+  <%= render partial: "shared/form_errors", locals: { object: @group, object_name: :group } %>
 
-      <ul>
-      <% @group.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :size %><br>
-    <%= f.number_field :size %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.field :name, as: :text %>
+  <%= f.field :size, as: :number %>
+  <%= f.submit_button %>
 <% end %>
