@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #added gems
 gem 'bcrypt', '~> 3.1.7' # Use ActiveModel has_secure_password
 gem 'draper', '~> 1.3'
+gem 'bootstrap-sass', '~> 3.3.6'
 
 
 group :development, :test do
