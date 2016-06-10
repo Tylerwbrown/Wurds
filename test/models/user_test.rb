@@ -22,14 +22,8 @@ class UserTest < ActiveSupport::TestCase
 
   test "password is required" do
     @user.password = ""
-    assert @user.invalid?
-  end
-
-  test "password_confirmation is required" do
     @user.password_confirmation = ""
     assert @user.invalid?
   end
-  # test "the truth" do
-  #   assert true
-  # end
+
 end
