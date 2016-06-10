@@ -2,8 +2,15 @@
 
 one:
   name: MyString
-  group: 
+  email: mystring@myemail.com
+  password_digest: asdfasdfasdfasfdasdfafgadghrh
 
 two:
   name: MyString
-  group: 
+  email: mystring@myemail.com
+  password_digest: asdfasdfasdfasfdasdfafgadghrh
+
+tyler:
+  name: Tyler Brown
+  email: tyler@sliceofnet.com
+  password_digest: asdfasdfasdfasfdasdfafgadghrh
