@@ -1,7 +1,7 @@
 module FormHelper
   class ActionView::Helpers::FormBuilder
-    def field(label, as: )
-      @template.content_tag(:div, class: :form_group) { field_label(label) + field_input(label, as) + @template.tag(:br) }
+    def field(label, as:)
+      @template.content_tag(:div, class: :form_group) { self.label(label) + field_input(label, as) + @template.tag(:br) }
     end
 
     def submit_button
@@ -9,10 +9,6 @@ module FormHelper
     end
 
     private
-
-    def field_label(label)
-      self.label label
-    end
 
     def field_input(label, type)
       self.send field_type(type), label, class: "form-control"
