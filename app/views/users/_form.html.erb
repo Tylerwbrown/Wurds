@@ -1,6 +1,10 @@
 <%= form_for(@user) do |f| %>
   <%= render partial: "shared/form_errors", locals: { object: @user, object_name: :user } %>
 
-  <%= f.field :name, as: :text %>
-  <%= f.submit_button %>
+  <%= f.field :email %>
+  <%= f.field :password, as: :password %>
+  <%= f.field :password_confirmation, as: :password %>
+
+  <%= f.submit_button %><br />
+  <%= link_to "Back", users_path, class: "btn btn-danger btn-lg btn-block" %>
 <% end %>

@@ -1,11 +1,11 @@
 module FormHelper
   class ActionView::Helpers::FormBuilder
-    def field(label, as:)
+    def field(label, as: :text)
       @template.content_tag(:div, class: :form_group) { self.label(label) + field_input(label, as) + @template.tag(:br) }
     end
 
     def submit_button
-      @template.content_tag(:div, class: :actions) { self.submit class: "btn btn-success" }
+      self.submit class: "btn btn-success btn-lg btn-block"
     end
 
     private
@@ -17,6 +17,7 @@ module FormHelper
     def field_type(type)
       return :text_field if type == :text
       return :number_field if type == :number
+      return :password_field if type == :password
 
       raise "Missing field_type"
       return false
